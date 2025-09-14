@@ -7,10 +7,13 @@ mobileMenu.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
-// Calcular altura del menú dinámicamente
+// Calcular altura del menú dinámicamente y aplicar scroll-margin-top a todas las secciones
 const menuHeight = document.querySelector('nav').offsetHeight;
+document.querySelectorAll('section').forEach(sec => {
+  sec.style.scrollMarginTop = menuHeight + 'px';
+});
 
-// Scroll suave + cierre de menú
+// Scroll suave y cierre de menú al presionar un link
 const navItems = document.querySelectorAll('#nav-links a');
 
 navItems.forEach(item => {
@@ -25,7 +28,7 @@ navItems.forEach(item => {
       navLinks.classList.remove('active');
     }
 
-    // Ajustar posición con altura del menú
+    // Scroll suave exacto considerando altura del menú
     const elementPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
     const offsetPosition = elementPosition - menuHeight;
 
@@ -36,7 +39,7 @@ navItems.forEach(item => {
   });
 });
 
-// Cerrar menú si se hace clic fuera
+// Cerrar menú hamburguesa al hacer clic fuera
 document.addEventListener('click', (e) => {
   if (
     navLinks.classList.contains('active') &&
