@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pro Handyman Services - carlos test</title>
+  <title>DM0407 - Pro Handyman Services</title>
+  <link rel="icon" href="img/hammer.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="path/to/lightbox.css"> <!-- Añadir enlace a la hoja de estilos de Lightbox -->
 </head>
 <body>
 
   <!-- Navigation -->
   <nav>
-    <div class="logo">Pro Handyman</div>
+    <a href="#home" class="nav-logo">DM 0407</a>
     <div class="menu-toggle" id="mobile-menu">&#9776;</div>
     <ul class="nav-links" id="nav-links">
       <li><a href="#home">Home</a></li>
@@ -22,6 +24,9 @@
 
   <!-- Hero Area: Home -->
   <section id="home">
+    <div class="hero-logo">
+      <img src="img/logo.svg" alt="Logo de la empresa">
+    </div>
     <h1>Trusted Pro Handyman Services</h1>
     <p>Welcome to our company. We provide reliable solutions for your home, including repairs, installations, cleaning, and more.</p>
     <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' });">View Services</button>
@@ -32,32 +37,53 @@
     <h1>Our Services</h1>
     <div class="services">
       <div class="service-card">
-        <h2>Repairs</h2>
-        <p>We handle all types of home repairs efficiently and professionally.</p>
+        <img src="img/services/repairs.webp" alt="Repairs">
+        <div class="service-card-content">
+          <h2>Repairs</h2>
+          <p>We handle all types of home repairs efficiently and professionally.</p>
+        </div>
       </div>
       <div class="service-card">
-        <h2>Painting</h2>
-        <p>Interior and exterior painting services to refresh your space.</p>
+        <img src="img/services/painting.webp" alt="Painting">
+        <div class="service-card-content">
+          <h2>Painting</h2>
+          <p>Interior and exterior painting services to refresh your space.</p>
+        </div>
       </div>
       <div class="service-card">
-        <h2>Cleaning</h2>
-        <p>Comprehensive home cleaning services to keep your home spotless.</p>
+        <img src="img/services/landscaping.webp" alt="Landscaping">
+        <div class="service-card-content">
+          <h2>Landscaping</h2>
+          <p>Comprehensive home landscaping services to keep your home spotless.</p>
+        </div>
       </div>
       <div class="service-card">
-        <h2>Installation & Moving</h2>
-        <p>Furniture, appliances, and other installations or moving tasks.</p>
+        <img src="img/services/moving.webp" alt="Moving">
+        <div class="service-card-content">
+          <h2>Installation & Moving</h2>
+          <p>Furniture, appliances, and other installations or moving tasks.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="img/services/electrical.webp" alt="Electrical">
+        <div class="service-card-content">
+          <h2>Electrical</h2>
+          <p>Safe and reliable electrical services for your home.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Hero Area: Gallery -->
+  <!-- Hero Area: Gallery with Lightbox -->
   <section id="gallery">
     <h1>Gallery</h1>
     <div class="gallery">
-      <img src="img/placeholder1.jpg" alt="Sample work 1">
-      <img src="img/placeholder2.jpg" alt="Sample work 2">
-      <img src="img/placeholder3.jpg" alt="Sample work 3">
-      <img src="img/placeholder4.jpg" alt="Sample work 4">
+      <a href="img/gallery/image1.webp" data-lightbox="gallery" data-title="Sample work 1"><img src="img/gallery/image1.webp" alt="Sample work 1"></a>
+      <a href="img/gallery/image2.webp" data-lightbox="gallery" data-title="Sample work 2"><img src="img/gallery/image2.webp" alt="Sample work 2"></a>
+      <a href="img/gallery/image3.webp" data-lightbox="gallery" data-title="Sample work 3"><img src="img/gallery/image3.webp" alt="Sample work 3"></a>
+      <a href="img/gallery/image4.webp" data-lightbox="gallery" data-title="Sample work 4"><img src="img/gallery/image4.webp" alt="Sample work 4"></a>
+      <a href="img/gallery/image5.webp" data-lightbox="gallery" data-title="Sample work 5"><img src="img/gallery/image5.webp" alt="Sample work 5"></a>
+      <a href="img/gallery/image6.webp" data-lightbox="gallery" data-title="Sample work 6"><img src="img/gallery/image6.webp" alt="Sample work 6"></a>
     </div>
   </section>
 
@@ -73,5 +99,6 @@
   </section>
 
   <script src="js/script.js"></script>
+  <script src="path/to/lightbox-plus-jquery.js"> </script> <!-- Añadir enlace al script de Lightbox -->
 </body>
 </html>
