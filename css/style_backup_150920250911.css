@@ -1,6 +1,3 @@
-/* ==============================
-   VARIABLES DE COLOR Y ESTILO
-   ============================== */
 :root {
   --body-bg: #1a1a1a;
   --text-main: #f5f5f5;
@@ -12,9 +9,8 @@
   --gallery-bg: #333;
 }
 
-/* ==============================
-   RESET BÁSICO
-   ============================== */
+
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -27,8 +23,8 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  color: var(--text-main);
-  background-color: var(--body-bg);
+  color: #f5f5f5;
+  background-color: #1a1a1a;
   line-height: 1.6;
 }
 
@@ -37,14 +33,12 @@ a {
   color: inherit;
 }
 
-/* ==============================
-   NAVEGACIÓN
-   ============================== */
+/* Navigation */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--nav-bg);
+  background-color: #111;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -69,10 +63,10 @@ nav ul.nav-links li a {
 }
 
 nav ul.nav-links li a:hover {
-  color: var(--link-hover);
+  color: #00bfff;
 }
 
-/* --- MOBILE MENU --- */
+/* Mobile Menu */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -89,7 +83,7 @@ nav ul.nav-links li a:hover {
     flex-direction: column;
     gap: 1rem;
     width: 100%;
-    background-color: var(--nav-bg);
+    background-color: #111;
     position: absolute;
     top: 60px;
     left: 0;
@@ -102,9 +96,7 @@ nav ul.nav-links li a:hover {
   }
 }
 
-/* ==============================
-   HERO / HOME
-   ============================== */
+/* Hero areas */
 section {
   min-height: 100vh;
   display: flex;
@@ -112,22 +104,22 @@ section {
   align-items: center;
   text-align: center;
   padding-bottom: 2rem;
-  padding-top: 0; /* ajustado dinámicamente por JS */
+  padding-top: 0; /* se maneja dinámicamente con JS */
 
   /* Animación fade-in */
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.8s ease-out;
 }
-
 section.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Home */
 .hero-logo img {
-  width: 500px;
-  height: auto;
+  width: 500px;  /* ancho visible */
+  height: auto;  /* mantiene proporción */
   opacity: 0.1;
 }
 
@@ -135,9 +127,7 @@ section.visible {
   justify-content: center;
 }
 
-/* ==============================
-   SECCIONES (SERVICIOS, GALERÍA, CONTACTO)
-   ============================== */
+/* Services, Gallery, Contact */
 #services, #gallery, #contact {
   justify-content: flex-start;
 }
@@ -155,7 +145,7 @@ section p {
 
 button {
   padding: 0.8rem 1.5rem;
-  background-color: var(--button-bg);
+  background-color: #00bfff;
   color: #111;
   border: none;
   border-radius: 5px;
@@ -165,18 +155,17 @@ button {
 }
 
 button:hover {
-  background-color: var(--button-hover);
+  background-color: #009acd;
 }
 
-/* ==============================
-   GALERÍA
-   ============================== */
+/* Gallery */
 .gallery {
   display: grid;
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
   margin-top: 2rem;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 1rem; /* Añade espaciado horizontal */
 }
 
 .gallery img {
@@ -184,24 +173,10 @@ button:hover {
   border-radius: 10px;
   object-fit: cover;
   aspect-ratio: 4/3;
-  background-color: var(--gallery-bg);
+  background-color: #333;
 }
 
-/* Ajuste para pantallas grandes (PC) */
-@media (min-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .gallery img {
-    border-radius: 8px;
-    object-fit: cover;
-  }
-}
-
-/* ==============================
-   FORMULARIO DE CONTACTO
-   ============================== */
+/* Contact */
 form {
   display: flex;
   flex-direction: column;
@@ -223,146 +198,19 @@ textarea {
   min-height: 120px;
 }
 
-/* ==============================
-   IMAGE COMPARISON SLIDER
-   ============================== */
-.comparison-slider {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  margin: 0 auto;
-  flex: 1;
-}
-
-.comparison-slider .img-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-}
-
-.comparison-slider img {
-  width: 100%;
-  display: block;
-  pointer-events: none;
-  user-select: none;
-  object-fit: cover;
-}
-
-.comparison-slider .after-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
-  overflow: hidden;
-}
-
-.comparison-slider .slider {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 6px;
-  background: rgba(255,255,255,0.6);
-  border-radius: 3px;
-  cursor: ew-resize;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.comparison-slider .slider::-webkit-slider-thumb,
-.comparison-slider .slider::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  background: #333;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-/* ==============================
-   GRILLA DE SERVICIOS
-   ============================== */
-.services-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  max-width: 95%;
-  margin: 0 auto;
-}
-
-/* SERVICE CARD */
-.service-card {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
-  background: var(--nav-bg);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px hsla(0, 0%, 0%, 0.33);
-  transition: transform 0.3s, box-shadow 0.3s;
-  width: calc(50% - 15px);
-  box-sizing: border-box;
-  height: auto;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-}
-
-/* SLIDER Y TEXTO DENTRO DE SERVICE CARD */
-.service-text {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* empuja botón al fondo */
-  padding-left: 20px;
-  height: 100%;
-}
-
-.service-btn {
-  align-self: flex-end;
-  padding: 8px 16px;
-  background-color: #1e90ff;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.service-btn:hover {
-  background-color: #1c86ee;
-  transform: translateY(-2px);
-}
-
-.service-text h2, .service-text p {
-  text-align: left;
-  margin: 0;
-}
-
-/* ==============================
-   MEDIA QUERIES
-   ============================== */
+/* Responsive text */
 @media (max-width: 768px) {
   .hero-logo img {
-    width: 200px;
-    height: auto;
-    opacity: 0.1;
-  }
-
+  width: 200px;  /* ancho visible */
+  height: auto;  /* mantiene proporción */
+  opacity: 0.1;
+}
+  
   section {
-    padding-left: 0.5rem;
+    padding-left: 0.5rem;   /* espacio lateral solo en móvil */
     padding-right: 0.5rem;
   }
-
+  
   section h1 {
     font-size: 2.2rem;
   }
@@ -370,45 +218,9 @@ textarea {
   section p {
     font-size: 1rem;
   }
-
-  .services-grid {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .service-card {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-  }
-
-  .service-text {
-    width: 100%;
-    padding-left: 0;
-    align-items: center;
-  }
-
-  .service-btn {
-    align-self: center;
-  }
-
-  .comparison-slider, .service-text {
-    width: 100%;
-    padding-left: 0;
-  }
-
-  .service-text h2, .service-text p {
-    text-align: center;
-  }
-
-  nav ul.nav-links {
-    width: 100%;
-  }
 }
 
-/* ==============================
-   LIGHTBOX
-   ============================== */
+/* Lightbox Styles */
 .lightbox {
   display: none;
   position: fixed;
@@ -416,7 +228,7 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
 }
 
@@ -444,3 +256,195 @@ textarea {
   font-size: 30px;
   cursor: pointer;
 }
+/* --- Ajuste de galería para PC --- */
+.gallery {
+  display: grid;
+  gap: 15px; /* espacio entre imágenes */
+}
+
+/* En pantallas grandes (PC) → 3 columnas */
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* opcional */
+    object-fit: cover;  /* asegura proporción */
+  }
+}
+
+/* ---- INICIO IMAGE COMPARISON SLIDER ---- */
+.comparison-slider {
+  position: relative;
+  width: 100%;
+  max-width: 50%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin: 0 auto;
+  flex: 1; /* ocupa todo el espacio disponible dentro de la card */
+
+}
+
+.comparison-slider .img-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.comparison-slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  object-fit: cover;
+}
+
+.comparison-slider .after-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.comparison-slider .slider {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 3px;
+  outline: none;
+  cursor: ew-resize;
+}
+.comparison-slider .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.comparison-slider .slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* ---- FIN IMAGE COMPARISON SLIDER ---- */
+
+/* --- INICIO GRILLA DE SERVICIOS --- */
+/* --- GRILLA DE SERVICIOS FLEX --- */
+
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap; /* permite varias filas */
+  gap: 30px;
+  justify-content: center; /* centra las filas y última card */
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/* --- SERVICE CARD --- */
+.service-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px hsla(0, 0%, 0%, 0.33);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: calc(50% - 15px);
+  box-sizing: border-box;
+
+  height: auto; /* cambia de 300px a auto */
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* sube un poquito */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* sombra más marcada */
+}
+
+
+/* --- SLIDER Y TEXTO --- */
+.comparison-slider {
+  width: 50%;
+}
+
+.service-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* empuja botón al fondo */
+  padding-left: 20px;
+  height: 100%; /* <-- ocupa todo el alto de la card */
+}
+
+
+.service-btn {
+  align-self: flex-end; /* coloca el botón a la derecha */
+  padding: 8px 16px;
+  background-color: #1e90ff; /* color de tu paleta */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.service-btn:hover {
+  background-color: #1c86ee;
+  transform: translateY(-2px);
+}
+
+.service-text h2, .service-text p {
+  text-align: left;
+  margin: 0;
+}
+
+/* --- MEDIA QUERY PARA MÓVIL --- */
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .service-card {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .service-text {
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
+  }
+  .service-btn {
+    align-self: center;
+  }
+  .comparison-slider, .service-text {
+    width: 100%;
+    padding-left: 0;
+  }
+  .service-text h2, .service-text p {
+    text-align: center;
+  }
+}
+
+
+/* --- FIN GRILLA DE SERVICIOS --- */

@@ -33,46 +33,86 @@
   </section>
 
   <!-- Hero Area: Services -->
+  
+  
   <section id="services">
-    <h1>Our Services</h1>
-    <div class="services">
-      <div class="service-card">
-        <img src="img/services/repairs.webp" alt="Repairs">
-        <div class="service-card-content">
-          <h2>Repairs</h2>
-          <p>We handle all types of home repairs efficiently and professionally.</p>
-        </div>
+  <h1>Our Services</h1>
+  <div class="services-grid">
+
+    <!-- Servicio 1 -->
+    <div class="service-card">
+      <div class="comparison-slider">
+        <img src="img/services/repairs-before.webp" alt="Before Repairs" class="before-img">
+        <img src="img/services/repairs-after.webp" alt="After Repairs" class="after-img">
+        <input type="range" min="0" max="100" value="50" class="slider">
       </div>
-      <div class="service-card">
-        <img src="img/services/painting.webp" alt="Painting">
-        <div class="service-card-content">
-          <h2>Painting</h2>
-          <p>Interior and exterior painting services to refresh your space.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <img src="img/services/landscaping.webp" alt="Landscaping">
-        <div class="service-card-content">
-          <h2>Landscaping</h2>
-          <p>Comprehensive home landscaping services to keep your home spotless.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <img src="img/services/moving.webp" alt="Moving">
-        <div class="service-card-content">
-          <h2>Installation & Moving</h2>
-          <p>Furniture, appliances, and other installations or moving tasks.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <img src="img/services/electrical.webp" alt="Electrical">
-        <div class="service-card-content">
-          <h2>Electrical</h2>
-          <p>Safe and reliable electrical services for your home.</p>
-        </div>
+      <div class="service-text">
+        <h2>Repairs</h2>
+        <p>We handle all types of home repairs efficiently and professionally.</p>
+        <button class="service-btn">Contact Us</button>
       </div>
     </div>
-  </section>
+
+    <!-- Servicio 2 -->
+    <div class="service-card">
+      <div class="comparison-slider">
+        <img src="img/services/painting-before.webp" alt="Before Painting" class="before-img">
+        <img src="img/services/painting-after.webp" alt="After Painting" class="after-img">
+        <input type="range" min="0" max="100" value="50" class="slider">
+      </div>
+      <div class="service-text">
+        <h2>Painting</h2>
+        <p>Interior and exterior painting services to refresh your space.</p>
+        <button class="service-btn">Contact Us</button>
+      </div>
+    </div>
+
+    <!-- Servicio 3 -->
+    <div class="service-card">
+      <div class="comparison-slider">
+        <img src="img/services/landscaping-before.webp" alt="Before Landscaping" class="before-img">
+        <img src="img/services/landscaping-after.webp" alt="After Landscaping" class="after-img">
+        <input type="range" min="0" max="100" value="50" class="slider">
+      </div>
+      <div class="service-text">
+        <h2>Landscaping</h2>
+        <p>Comprehensive home landscaping services to keep your home spotless.</p>
+        <button class="service-btn">Contact Us</button>
+      </div>
+    </div>
+
+    <!-- Servicio 4 -->
+    <div class="service-card">
+      <div class="comparison-slider">
+        <img src="img/services/moving-before.webp" alt="Before Moving" class="before-img">
+        <img src="img/services/moving-after.webp" alt="After Moving" class="after-img">
+        <input type="range" min="0" max="100" value="50" class="slider">
+      </div>
+      <div class="service-text">
+        <h2>Installation & Moving</h2>
+        <p>Furniture, appliances, and other installations or moving tasks.</p>
+        <button class="service-btn">Contact Us</button>
+      </div>
+    </div>
+
+    <!-- Servicio 5 -->
+    <div class="service-card">
+      <div class="comparison-slider">
+        <img src="img/services/electrical-before.webp" alt="Before Electrical" class="before-img">
+        <img src="img/services/electrical-after.webp" alt="After Electrical" class="after-img">
+        <input type="range" min="0" max="100" value="50" class="slider">
+      </div>
+      <div class="service-text">
+        <h2>Electrical</h2>
+        <p>Safe and reliable electrical services for your home.</p>
+        <button class="service-btn">Contact Us</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 
   <!-- Hero Area: Gallery with Lightbox -->
   <section id="gallery">
@@ -97,6 +137,11 @@
       <button type="submit">Send</button>
     </form>
   </section>
+
+  <!-- INICIO TEST Area: SLIDER IMAGES -->
+
+  
+  <!-- FIN TEST Area: SLIDER IMAGES -->
 
   <script src="js/script.js"></script>
   <script src="path/to/lightbox-plus-jquery.js"> </script> <!-- Añadir enlace al script de Lightbox -->
