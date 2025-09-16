@@ -71,7 +71,7 @@ body.lb-disable-scrolling {
   width: 32px;
   height: 32px;
   margin: 0 auto;
-  background: url(../images/loading.gif) no-repeat;
+  background: url(../images/loading.webp) no-repeat;
 }
 
 .lb-nav {
@@ -177,8 +177,8 @@ body.lb-disable-scrolling {
 .lb-data .lb-close {
   display: block;
   float: right;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   background: url(../images/close.png) top right no-repeat;
   text-align: right;
   outline: none;
