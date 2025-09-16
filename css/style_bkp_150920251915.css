@@ -1,3 +1,6 @@
+/* ==============================
+   VARIABLES DE COLOR (respaldo)
+   ============================== */
 :root {
   --body-bg: #1a1a1a;
   --text-main: #f5f5f5;
@@ -9,8 +12,9 @@
   --gallery-bg: #333;
 }
 
-
-/* Reset básico */
+/* ==============================
+   RESET BÁSICO
+   ============================== */
 * {
   margin: 0;
   padding: 0;
@@ -33,7 +37,9 @@ a {
   color: inherit;
 }
 
-/* Navigation */
+/* ==============================
+   NAVEGACIÓN
+   ============================== */
 nav {
   position: fixed;
   top: 0;
@@ -66,7 +72,7 @@ nav ul.nav-links li a:hover {
   color: #00bfff;
 }
 
-/* Mobile Menu */
+/* --- MOBILE MENU --- */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -96,7 +102,9 @@ nav ul.nav-links li a:hover {
   }
 }
 
-/* Hero areas */
+/* ==============================
+   SECCIONES (HERO / HOME / SERVICES / GALLERY / CONTACT)
+   ============================== */
 section {
   min-height: 100vh;
   display: flex;
@@ -104,22 +112,23 @@ section {
   align-items: center;
   text-align: center;
   padding-bottom: 2rem;
-  padding-top: 0; /* se maneja dinámicamente con JS */
+  padding-top: 0; /* se ajusta dinámicamente con JS */
 
-  /* Animación fade-in */
+  /* Fade-in */
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.8s ease-out;
 }
+
 section.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Home */
+/* --- HERO / HOME --- */
 .hero-logo img {
-  width: 500px;  /* ancho visible */
-  height: auto;  /* mantiene proporción */
+  width: 500px;
+  height: auto;
   opacity: 0.1;
 }
 
@@ -127,11 +136,7 @@ section.visible {
   justify-content: center;
 }
 
-/* Services, Gallery, Contact */
-#services, #gallery, #contact {
-  justify-content: flex-start;
-}
-
+/* --- TITULOS Y TEXTOS GENERALES --- */
 section h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -143,6 +148,7 @@ section p {
   margin-bottom: 2rem;
 }
 
+/* --- BOTONES GENERALES --- */
 button {
   padding: 0.8rem 1.5rem;
   background-color: #00bfff;
@@ -158,14 +164,16 @@ button:hover {
   background-color: #009acd;
 }
 
-/* Gallery */
+/* ==============================
+   GALERÍA
+   ============================== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  gap: 15px;
   margin-top: 2rem;
   width: 100%;
-  padding: 0 1rem; /* Añade espaciado horizontal */
+  padding: 0 1rem;
 }
 
 .gallery img {
@@ -176,7 +184,9 @@ button:hover {
   background-color: #333;
 }
 
-/* Contact */
+/* ==============================
+   FORMULARIO DE CONTACTO
+   ============================== */
 form {
   display: flex;
   flex-direction: column;
@@ -198,101 +208,17 @@ textarea {
   min-height: 120px;
 }
 
-/* Responsive text */
-@media (max-width: 768px) {
-  .hero-logo img {
-  width: 200px;  /* ancho visible */
-  height: auto;  /* mantiene proporción */
-  opacity: 0.1;
-}
-  
-  section {
-    padding-left: 0.5rem;   /* espacio lateral solo en móvil */
-    padding-right: 0.5rem;
-  }
-  
-  section h1 {
-    font-size: 2.2rem;
-  }
-
-  section p {
-    font-size: 1rem;
-  }
-}
-
-/* Lightbox Styles */
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
-}
-
-.lightbox-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 90%;
-  max-height: 90%;
-}
-
-.lightbox-content img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0 auto;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-}
-/* --- Ajuste de galería para PC --- */
-.gallery {
-  display: grid;
-  gap: 15px; /* espacio entre imágenes */
-}
-
-/* En pantallas grandes (PC) → 3 columnas */
-@media (min-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* opcional */
-    object-fit: cover;  /* asegura proporción */
-  }
-}
-
-/* ---- INICIO IMAGE COMPARISON SLIDER ---- */
+/* ==============================
+   IMAGE COMPARISON SLIDER
+   ============================== */
 .comparison-slider {
   position: relative;
-  width: 100%;
-  max-width: 50%;
+  width: 50%;
+  max-width: 500px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   margin: 0 auto;
-  flex: 1; /* ocupa todo el espacio disponible dentro de la card */
-
-}
-
-.comparison-slider .img-container {
-  position: relative;
-  width: 100%;
-  height: auto;
 }
 
 .comparison-slider img {
@@ -320,23 +246,15 @@ textarea {
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
-  -webkit-appearance: none;
-  appearance: none;
   height: 6px;
   background: rgba(255,255,255,0.6);
   border-radius: 3px;
-  outline: none;
   cursor: ew-resize;
-}
-.comparison-slider .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 16px;
-  height: 16px;
-  background: #333;
-  border-radius: 50%;
-  cursor: pointer;
 }
+
+.comparison-slider .slider::-webkit-slider-thumb,
 .comparison-slider .slider::-moz-range-thumb {
   width: 16px;
   height: 16px;
@@ -344,22 +262,19 @@ textarea {
   border-radius: 50%;
   cursor: pointer;
 }
-/* ---- FIN IMAGE COMPARISON SLIDER ---- */
 
-/* --- INICIO GRILLA DE SERVICIOS --- */
-/* --- GRILLA DE SERVICIOS FLEX --- */
-
-
+/* ==============================
+   SERVICE CARDS
+   ============================== */
 .services-grid {
   display: flex;
-  flex-wrap: wrap; /* permite varias filas */
+  flex-wrap: wrap;
   gap: 30px;
-  justify-content: center; /* centra las filas y última card */
+  justify-content: center;
   max-width: 95%;
   margin: 0 auto;
 }
 
-/* --- SERVICE CARD --- */
 .service-card {
   display: flex;
   flex-direction: row;
@@ -368,39 +283,31 @@ textarea {
   background: #111;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px hsla(0, 0%, 0%, 0.33);
+  box-shadow: 0 8px 20px hsla(0,0%,0%,0.33);
   transition: transform 0.3s, box-shadow 0.3s;
   width: calc(50% - 15px);
   box-sizing: border-box;
-
-  height: auto; /* cambia de 300px a auto */
+  height: auto;
 }
 
 .service-card:hover {
-  transform: translateY(-5px); /* sube un poquito */
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* sombra más marcada */
-}
-
-
-/* --- SLIDER Y TEXTO --- */
-.comparison-slider {
-  width: 50%;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
 }
 
 .service-text {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* empuja botón al fondo */
+  justify-content: space-between;
   padding-left: 20px;
-  height: 100%; /* <-- ocupa todo el alto de la card */
+  height: 100%;
 }
 
-
 .service-btn {
-  align-self: flex-end; /* coloca el botón a la derecha */
+  align-self: flex-end;
   padding: 8px 16px;
-  background-color: #1e90ff; /* color de tu paleta */
+  background-color: #1e90ff;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -413,38 +320,83 @@ textarea {
   transform: translateY(-2px);
 }
 
-.service-text h2, .service-text p {
+.service-text h2,
+.service-text p {
   text-align: left;
   margin: 0;
 }
 
-/* --- MEDIA QUERY PARA MÓVIL --- */
+/* ==============================
+   MEDIA QUERIES
+   ============================== */
 @media (max-width: 768px) {
+  /* Hero */
+  .hero-logo img {
+    width: 200px;
+    height: auto;
+    opacity: 0.1;
+  }
+
+  /* Secciones */
+  section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  section h1 {
+    font-size: 2.2rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
+
+  /* Services Grid */
   .services-grid {
     flex-direction: column;
     gap: 20px;
   }
+
   .service-card {
     flex-direction: column;
     width: 100%;
     align-items: center;
   }
+
   .service-text {
     width: 100%;
     padding-left: 0;
     align-items: center;
   }
+
   .service-btn {
     align-self: center;
   }
-  .comparison-slider, .service-text {
+
+  .comparison-slider,
+  .service-text {
     width: 100%;
     padding-left: 0;
   }
-  .service-text h2, .service-text p {
+
+  .service-text h2,
+  .service-text p {
     text-align: center;
+  }
+
+  nav ul.nav-links {
+    width: 100%;
   }
 }
 
+/* En pantallas grandes (PC) → Galería 3 columnas */
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-/* --- FIN GRILLA DE SERVICIOS --- */
+  .gallery img {
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
