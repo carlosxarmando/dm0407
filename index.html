@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="path/to/lightbox.css"> <!-- Añadir enlace a la hoja de estilos de Lightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
 <body>
@@ -30,7 +31,7 @@
       <img src="img/logo.svg" alt="Logo de la empresa">
     </div>
     <h1>Trusted Pro Handyman Services</h1>
-    <p>Welcome to our company. We provide reliable solutions for your home, including repairs, installations, cleaning, and more.</p>
+    <p>We specialize in interior and exterior painting and bathroom remodeling. Transform your space with quality, speed, and competitive prices.</p>
     <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' });">View Services</button>
   </section>
 
@@ -140,6 +141,7 @@
   <!-- Hero Area: Gallery with Lightbox -->
   <section id="gallery">
     <h1>Gallery</h1>
+    <!-- galeria de pc -->
     <div class="gallery">
       <a href="img/gallery/image1.webp" data-lightbox="gallery" data-title="Sample work 1"><img src="img/gallery/image1.webp" alt="Sample work 1"></a>
       <a href="img/gallery/image2.webp" data-lightbox="gallery" data-title="Sample work 2"><img src="img/gallery/image2.webp" alt="Sample work 2"></a>
@@ -148,6 +150,31 @@
       <a href="img/gallery/image5.webp" data-lightbox="gallery" data-title="Sample work 5"><img src="img/gallery/image5.webp" alt="Sample work 5"></a>
       <a href="img/gallery/image6.webp" data-lightbox="gallery" data-title="Sample work 6"><img src="img/gallery/image6.webp" alt="Sample work 6"></a>
     </div>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/gallery/work1.webp" alt="work 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/gallery/work2.webp" alt="work 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/gallery/work3.webp" alt="work 3">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/gallery/work4.webp" alt="work 4">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/gallery/work5.webp" alt="work 5">
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+     
   </section>
 
   <!-- Hero Area: Contact -->
@@ -166,7 +193,9 @@
     <p>&copy; 2025 DM0407. All rights reserved.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
   <script src="path/to/lightbox-plus-jquery.js"> </script> <!-- Añadir enlace al script de Lightbox -->
+  
 </body>
 </html>
