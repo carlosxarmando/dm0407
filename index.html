@@ -230,12 +230,34 @@
     <h2>Contact Us</h2>
 
     <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+    <form name="contact" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="contact">
 
       <input type="text" name="name" placeholder="Name" required>
       <input type="email" name="email" placeholder="Email" required>
       <textarea name="message" placeholder="Message" required></textarea>
       <button type="submit">Send</button>
+    </form>
+
+    <form name="contact2" method="POST" data-netlify="true">
+      <p>
+        <label>Your Name: <input type="text" name="name" /></label>
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
     </form>
 
 <p></p>
