@@ -29,10 +29,23 @@
   <link rel="icon" href="img/hammer.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/style-mobile.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </noscript>
+
   <link rel="stylesheet" href="path/to/lightbox.css"> <!-- Añadir enlace a la hoja de estilos de Lightbox -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="canonical" href="https://www.dm0407.com/">
+
+  <style>
+  #home { text-align: center; padding: 50px 20px; }
+  #home h1 { font-family: 'Roboto', sans-serif; font-size: 3rem; margin-bottom: 20px; }
+  #home p { font-family: 'Roboto', sans-serif; font-size: 1.2rem; margin-bottom: 30px; }
+  #home .hero-logo img { width: 500px; height: auto; display: block; opacity: 0.1; }
+  </style>
+
 
   <!-- Schema LocalBusiness -->
   <script type="application/ld+json">
