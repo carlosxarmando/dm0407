@@ -46,6 +46,7 @@ select {
   font-family: 'Roboto', sans-serif;
 }
 
+
 /* ==============================
    BACKGROUNDS DE SECCIONES
    ============================== */
@@ -149,6 +150,16 @@ section.visible {
 /* --- TITULOS Y TEXTOS --- */
 section h1 {
   font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+section h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+section h3 {
+  font-size: 1.3rem;
   margin-bottom: 1rem;
 }
 
@@ -353,6 +364,61 @@ textarea { resize: vertical; min-height: 120px; }
   height: 100%;
   object-fit: cover;
 }
+
+/* ==============================
+   CONTACT INFO
+   ============================== */
+.contact-info {
+  display: flex;
+  align-items: center;     /* centra verticalmente todo */
+  justify-content: center; /* centra horizontalmente */
+  gap: 20px;               /* espacio entre columnas */
+}
+
+.contact-left h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+.contact-left img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Separador vertical */
+.divider {
+  width: 1px;
+  background-color: #ccc;
+  height: 60px; /* ajusta según lo alto de tu bloque */
+}
+
+/* Columna derecha */
+
+.contact-right {
+  display: flex;
+  align-items: center; /* centra verticalmente texto e iconos */
+  flex-direction: row; /* cambia columna a fila */
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-right p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.contact-right .social-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+
+
+
 
 /* ==============================
    FOOTER
