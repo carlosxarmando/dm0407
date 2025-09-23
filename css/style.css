@@ -90,33 +90,12 @@ nav ul.nav-links li a:hover {
   color: var(--link-hover);
 }
 
-/* --- MOBILE MENU --- */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle { display: block; }
-
-  nav ul.nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    background-color: var(--nav-bg);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    padding: 1rem 0;
-    align-items: center;
-  }
-
-  nav ul.nav-links.active {
-    display: flex;
-  }
-}
 
 /* ==============================
    SECCIONES GENERALES
@@ -339,6 +318,12 @@ textarea { resize: vertical; min-height: 120px; }
   margin: 0;
 }
 
+/* Solo para el párrafo de Repairs */
+.service-card:first-child .service-text p {
+  font-size: clamp(17px, 2vw, 22px);
+}
+
+
 /* ==============================
    SWIPER SLIDER
    ============================== */
@@ -399,9 +384,7 @@ textarea { resize: vertical; min-height: 120px; }
 
 .contact-right {
   display: flex;
-  align-items: center; /* centra verticalmente texto e iconos */
   flex-direction: row; /* cambia columna a fila */
-  align-items: center;
   gap: 10px;
 }
 
@@ -439,42 +422,11 @@ textarea { resize: vertical; min-height: 120px; }
 /* ==============================
    MEDIA QUERIES
    ============================== */
-@media (max-width: 768px) {
-  /* Hero */
-  .hero-logo img { width: 200px; opacity: 0.1; }
 
-  /* Secciones */
-  section {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  section h1 { font-size: 2.2rem; }
-  section p { font-size: 1rem; }
-
-  /* Services Grid */
-  .services-grid { flex-direction: column; gap: 20px; }
-
-  .service-card { flex-direction: column; width: 100%; align-items: center; }
-  .service-text { width: 100%; padding-left: 0; align-items: center; }
-  .service-btn { align-self: center; }
-  .service-text h2, .service-text p { text-align: center; }
-
-  /* Sliders y galería */
-  .comparison-slider,
-  .service-text { width: 100%; padding-left: 0; }
-
-  nav ul.nav-links { width: 100%; }
-  #gallery { min-height: auto; }
-}
 
 @media (min-width: 768px) {
   .gallery { grid-template-columns: repeat(3, 1fr); }
   .gallery img { border-radius: 8px; }
 
   div.swiper.mySwiper { display: none; }
-}
-
-@media (max-width: 767px) {
-  .gallery { display: none; }
 }
