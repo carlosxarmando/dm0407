@@ -121,7 +121,6 @@ section.visible {
 .hero-logo img {
   width: 500px;
   height: auto;
-  opacity: 0.1;
 }
 
 #home { justify-content: center; }
@@ -318,12 +317,6 @@ textarea { resize: vertical; min-height: 120px; }
   margin: 0;
 }
 
-/* Solo para el párrafo de Repairs */
-.service-card:first-child .service-text p {
-  font-size: clamp(17px, 2vw, 22px);
-}
-
-
 /* ==============================
    SWIPER SLIDER
    ============================== */
@@ -384,7 +377,9 @@ textarea { resize: vertical; min-height: 120px; }
 
 .contact-right {
   display: flex;
+  align-items: center; /* centra verticalmente texto e iconos */
   flex-direction: row; /* cambia columna a fila */
+  align-items: center;
   gap: 10px;
 }
 

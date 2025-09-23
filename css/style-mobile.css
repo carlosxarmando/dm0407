@@ -34,7 +34,7 @@
   nav ul.nav-links.active { display: flex; }
 
   /* Hero */
-  .hero-logo img { width: 200px; opacity: 0.1; }
+  .hero-logo img { width: 200px; opacity: 1; }
 
   /* Secciones */
   section { padding-left: 0.5rem; padding-right: 0.5rem; }
